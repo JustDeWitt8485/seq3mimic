@@ -54,7 +54,6 @@ def create_mimic_dict(filename):
         body = f.read()
         words = body.split()
         print(words)
-
     i = 0
     for i in range(len(words) - 1):
         if words[i] not in md:
