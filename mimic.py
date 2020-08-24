@@ -20,7 +20,10 @@ You can try adding in line breaks around 70 columns so the output looks
 better.
 """
 
-__author__ = "???"
+__author__ = """Tracy DeWit
+https://openbookproject.net/thinkcs
+/python/english3e/dictionaries.html
+"""
 
 
 import random
@@ -45,8 +48,22 @@ def create_mimic_dict(filename):
                 "who" : ["knows"]
             }
     """
-    # +++your code here+++
-    pass
+    md = {}
+
+    with open(filename) as f:
+        body = f.read()
+        words = body.split()
+        print(words)
+
+    i = 0
+    for i in range(len(words) - 1):
+        if words[i] not in md:
+            md[words[i]] = [words[i + 1]]
+        else:
+            md[words[i]].append(words[i + 1])
+        i += 1
+    md[''] = [words[0]]
+    return md
 
 
 def print_mimic_random(mimic_dict, num_words):
