@@ -53,7 +53,7 @@ def create_mimic_dict(filename):
     with open(filename) as f:
         body = f.read()
         words = body.split()
-        print(words)
+
     i = 0
     for i in range(len(words) - 1):
         if words[i] not in md:
@@ -74,7 +74,7 @@ def print_mimic_random(mimic_dict, num_words):
         - Randomly select a new word from the next-list
         - Repeat this process num_words times
     """
-    # +++your code here+++
+
     pass
 
 
