@@ -20,7 +20,7 @@ You can try adding in line breaks around 70 columns so the output looks
 better.
 """
 
-__author__ = """Tracy DeWit
+__author__ = """Tracy DeWit, Manuel Velasco,
 https://openbookproject.net/thinkcs
 /python/english3e/dictionaries.html
 """
@@ -74,8 +74,14 @@ def print_mimic_random(mimic_dict, num_words):
         - Randomly select a new word from the next-list
         - Repeat this process num_words times
     """
-
-    pass
+    # +++your code here+++
+    start_word = ''
+    for __ in range(num_words + 1):
+        new_word = mimic_dict.get(start_word)
+        print(start_word, end=' ')
+        if new_word is None:
+            new_word = mimic_dict['']
+        start_word = random.choice(new_word)
 
 
 def main(args):
